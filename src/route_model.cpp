@@ -75,3 +75,8 @@ RouteModel::Node &RouteModel::FindClosestNode(float x, float y) {
 
     return SNodes()[closest_idx];
 }
+
+std::ostream& operator<<(std::ostream& os, const RouteModel::Node& node) {
+    os << "Node(" << node.x << ", " << node.y << ")";
+    return os;
+}
